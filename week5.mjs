@@ -41,3 +41,23 @@ console.log(`${is_adult(17)}`);
 console.log(`${is_adult(18)}`);
 console.log(`${is_adult(19)}`);
 //#endregion
+//#region The List Filter:
+// Write a test suite for a function get_even_numbers(input_list) that takes a list of integers and returns only the even ones
+
+function get_even_numbers(input_list) {
+  const even_numbers = [];
+  
+  for (let i = 0; i < input_list.length; i++) {
+    if (input_list[i] % 2 === 0) {
+      even_numbers.push(input_list[i]);
+    }
+  }
+  
+  return even_numbers;
+}
+
+console.log(`[${get_even_numbers([1, 2, 3, 4, 5, 6])}]`);
+console.log(`[${get_even_numbers([10, 15, 20, 25])}]`);
+console.log(`[${get_even_numbers([0, 1, 2])}]`);
+console.log(`[${get_even_numbers([-4, -3, -2, -1, 0])}]`);
+//#endregion
