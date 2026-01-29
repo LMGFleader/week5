@@ -61,3 +61,32 @@ console.log(`[${get_even_numbers([10, 15, 20, 25])}]`);
 console.log(`[${get_even_numbers([0, 1, 2])}]`);
 console.log(`[${get_even_numbers([-4, -3, -2, -1, 0])}]`);
 //#endregion
+//#region The Error Handler:
+// Write a test suite for a function divide(a, b). NB! as we know, dividing by zero is a math crime! Throw errors if crimes are commited!
+
+function divide(a, b) {
+  // Check if we're trying to divide by zero (the math crime!)
+  if (b === 0) {
+    throw new Error("You criminal!");
+  }
+  
+  // If it's safe, do the division
+  return a / b;
+}
+
+console.log(`${divide(15, 3)}`);
+console.log(`${divide(10, 100)}`);
+//How to run the code with an error and show a result commment?
+  try {
+    divide(0, 0);
+  } catch (error) {
+    console.log(`"${error.message}"`);
+  }
+
+  try {
+    divide(-10, 0);
+  } catch (error) {
+    console.log(`"${error.message}"`);
+  }
+
+//#endregion
